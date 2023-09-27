@@ -45,7 +45,14 @@ class App extends React.Component {
         thumbnailClass: "featured-thumb",
         description: "Custom class for slides & thumbnails",
       },
-    ].concat(this._getStaticImages());
+      {
+        original: `${PREFIX_URL}1.jpg`,
+        thumbnail: `${PREFIX_URL}1t.jpg`,
+        originalClass: "featured-slide",
+        thumbnailClass: "featured-thumb",
+        description: "Custom class for slides & thumbnails",
+      },
+    ];
   }
 
   _onImageClick(event) {
@@ -191,11 +198,11 @@ class App extends React.Component {
           showPlayButton={
             this.state.showPlayButton && this.state.showGalleryPlayButton
           }
-          showThumbnails={this.state.showThumbnails}
+          showThumbnails={true}
           showIndex={this.state.showIndex}
           showNav={this.state.showNav}
           isRTL={this.state.isRTL}
-          thumbnailPosition={this.state.thumbnailPosition}
+          thumbnailPosition={"right"}
           slideDuration={parseInt(this.state.slideDuration)}
           slideInterval={parseInt(this.state.slideInterval)}
           slideOnThumbnailOver={this.state.slideOnThumbnailOver}

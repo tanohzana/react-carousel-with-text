@@ -643,7 +643,10 @@ class ImageGallery extends React.Component {
             onKeyUp={(event) => this.handleThumbnailKeyUp(event, index)}
             onClick={(event) => this.onThumbnailClick(event, index)}
           >
-            {handleRenderThumbInner(item)}
+            <div>
+              <h2>This is my title</h2>
+              <p>This a just a paragraph</p>
+            </div>
           </button>
         );
       }
